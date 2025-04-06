@@ -6,6 +6,7 @@ import ProductInfo from '@/components/ProductInfo';
 import RecommendedItems from '@/components/RecommendedItems';
 import MilestoneReward from '@/components/MilestoneReward';
 import ActionBar from '@/components/ActionBar';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
   return (

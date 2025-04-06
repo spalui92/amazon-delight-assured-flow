@@ -22,7 +22,7 @@ const MilestoneReward = () => {
     toast({
       title: "Reward Claimed!",
       description: "Your free 3-month Amazon Music Unlimited subscription has been added to your account.",
-      variant: "success",
+      variant: "default",
     });
   };
 

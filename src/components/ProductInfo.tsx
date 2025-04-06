@@ -9,7 +9,8 @@ import {
   Star, 
   ThumbsUp, 
   MessageCircle,
-  PlayCircle
+  PlayCircle,
+  CheckCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
