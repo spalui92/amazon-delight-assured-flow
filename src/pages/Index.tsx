@@ -7,25 +7,28 @@ import RecommendedItems from '@/components/RecommendedItems';
 import MilestoneReward from '@/components/MilestoneReward';
 import ActionBar from '@/components/ActionBar';
 import { Button } from '@/components/ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
+  const isMobile = useIsMobile();
+
   return (
-    <div className="min-h-screen bg-gray-100 pb-16">
+    <div className="min-h-screen bg-gray-100 pb-20">
       <Header />
       
-      <main className="container mx-auto px-4 py-6">
-        <h1 className="text-2xl font-bold text-amazon-blue mb-6">Your Order Details</h1>
+      <main className="container mx-auto px-4 py-4 md:py-6">
+        <h1 className="text-xl md:text-2xl font-bold text-amazon-blue mb-4 md:mb-6">Your Order Details</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {/* Main content - 3/4 width on desktop */}
-          <div className="md:col-span-3 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+          {/* Main content - full width on mobile, 3/4 width on desktop */}
+          <div className="md:col-span-3 space-y-4 md:space-y-6">
             <DeliveryTracker />
             <ProductInfo />
-            <RecommendedItems />
+            {!isMobile && <RecommendedItems />}
           </div>
           
-          {/* Sidebar - 1/4 width on desktop */}
-          <div className="md:col-span-1 space-y-6">
+          {/* Sidebar - below main content on mobile, 1/4 width on desktop */}
+          <div className="md:col-span-1 space-y-4 md:space-y-6">
             <MilestoneReward />
             
             <div className="bg-white rounded-lg shadow-md p-4">
@@ -70,6 +73,13 @@ const Index = () => {
             </div>
           </div>
         </div>
+        
+        {/* Mobile-only recommendations section */}
+        {isMobile && (
+          <div className="mt-4">
+            <RecommendedItems />
+          </div>
+        )}
       </main>
       
       <ActionBar />
