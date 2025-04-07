@@ -1,8 +1,20 @@
 
 import React from 'react';
-import { Star } from 'lucide-react';
+import { Star, RefreshCw, Check } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
 
 const ProductImage = () => {
+  const { toast } = useToast();
+  
+  const handleReturnClick = () => {
+    toast({
+      title: "Return Process Initiated",
+      description: "A return label has been emailed to you. Package your item and drop it off at any UPS location.",
+      variant: "default",
+    });
+  };
+  
   return (
     <div className="flex-none w-full md:w-1/3">
       <div className="bg-gray-100 p-4 rounded-lg flex items-center justify-center h-48 md:h-64">
@@ -27,6 +39,23 @@ const ProductImage = () => {
           <span className="ml-2 text-xs md:text-sm text-gray-600">4.5 (1,234 reviews)</span>
         </div>
         <p className="text-md md:text-lg font-semibold mt-1 md:mt-2">$1,799.99</p>
+        
+        {/* One-click return process button */}
+        <div className="mt-3 pt-3 border-t border-gray-200">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="w-full flex items-center justify-center" 
+            onClick={handleReturnClick}
+          >
+            <RefreshCw className="h-3 w-3 md:h-4 md:w-4 mr-2" />
+            One-Click Return
+          </Button>
+          <div className="flex items-center justify-center mt-2 text-xs text-gray-500">
+            <Check className="h-3 w-3 mr-1 text-green-500" />
+            <span>Return window: 30 days left</span>
+          </div>
+        </div>
       </div>
     </div>
   );
