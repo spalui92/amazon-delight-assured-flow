@@ -7,7 +7,7 @@ const ProductImage = () => {
     <div className="flex-none w-full md:w-1/3">
       <div className="bg-gray-100 p-4 rounded-lg flex items-center justify-center h-48 md:h-64">
         <img 
-          src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1000_.jpg" 
+          src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&h=600" 
           alt="Dell XPS 15 Laptop" 
           className="max-h-full max-w-full object-contain"
         />

@@ -12,7 +12,7 @@ const RecommendedItems = () => {
     {
       id: 1,
       name: "Dell Premium Sleeve",
-      image: "https://m.media-amazon.com/images/I/71kq+tsZyyL._AC_SL1500_.jpg",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&h=600",
       price: "$39.99",
       rating: 4.5,
       reviews: 412,
@@ -21,7 +21,7 @@ const RecommendedItems = () => {
     {
       id: 2,
       name: "Dell Thunderbolt Dock",
-      image: "https://m.media-amazon.com/images/I/61LGPq4d8cL._AC_SL1500_.jpg",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600",
       price: "$259.99",
       rating: 4.3,
       reviews: 289,
@@ -30,7 +30,7 @@ const RecommendedItems = () => {
     {
       id: 3,
       name: "Dell Premier Wireless Mouse",
-      image: "https://m.media-amazon.com/images/I/61n--3L5P3L._AC_SL1500_.jpg",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&h=600",
       price: "$79.99",
       rating: 4.8,
       reviews: 563,
